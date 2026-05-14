@@ -10,12 +10,12 @@
     "media": "sub",
     "languages": ["US"],
     "icon": "https://animetosho.org/inc/favicon.ico",
-    "update": "https://github.com/jacketmantel/extensions-test/index.json",
-    "code": "https://github.com/jacketmantel/extensions-test/animetosho.js",
+    "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
+    "code": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/animetosho.js",
     "options": {
       "useTorrent": {
         "type": "boolean",
-        "description": "Use .torrent files instead of magnet links. May cause issues if your ISP blocks certain domains.",
+        "description": "Use .torrent files instead of magnet links.",
         "default": false
       }
     }
@@ -31,8 +31,8 @@
     "media": "sub",
     "languages": ["US"],
     "icon": "https://releases.moe/favicon.png",
-    "update": "https://github.com/jacketmantel/extensions-test/index.json",
-    "code": "https://github.com/jacketmantel/extensions-test/seadex.js"
+    "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
+    "code": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/seadex.js"
   },
   {
     "manifestVersion": 2,
@@ -45,8 +45,8 @@
     "media": "sub",
     "languages": ["US"],
     "icon": "https://nyaa.si/static/favicon.png",
-    "update": "https://github.com/jacketmantel/extensions-test/index.json",
-    "code": "https://github.com/jacketmantel/extensions-test/nyaa.js"
+    "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
+    "code": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/nyaa.js"
   },
   {
     "manifestVersion": 2,
@@ -59,9 +59,8 @@
     "media": "sub",
     "updatePeers": false,
     "languages": ["US"],
-    "url": "https://nekobt.to/api/v1/",
     "icon": "https://nekobt.to/cdn/pfp/null/64",
-    "update": "https://github.com/jacketmantel/extensions-test/index.json",
-    "code": "https://github.com/jacketmantel/extensions-test/nekobt.js"
+    "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
+    "code": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/nekobt.js"
   }
 ]

@@ -29,8 +29,7 @@ export default new class AnimeTosho {
     }))
   }
 
-  async single({ anidbEid, resolution, exclusions }, options) {
-    if (!navigator.onLine) return []
+  async single({ anidbEid, resolution, exclusions, fetch }, options) {
     if (!anidbEid) return []
     const query = this._buildQuery({ resolution, exclusions })
     const res = await fetch(`${this.url}?eid=${anidbEid}${query}`)
@@ -39,8 +38,7 @@ export default new class AnimeTosho {
     return data.length ? this._map(data, false, options?.useTorrent) : []
   }
 
-  async batch({ anidbAid, resolution, exclusions, episode }, options) {
-    if (!navigator.onLine) return []
+  async batch({ anidbAid, resolution, exclusions, episode, fetch }, options) {
     if (!anidbAid) return []
     const query = this._buildQuery({ resolution, exclusions })
     const res = await fetch(`${this.url}?order=size-d&aid=${anidbAid}${query}`)
@@ -51,8 +49,7 @@ export default new class AnimeTosho {
     return data.length ? this._map(data, true, options?.useTorrent) : []
   }
 
-  async movie({ anidbAid, resolution, exclusions }, options) {
-    if (!navigator.onLine) return []
+  async movie({ anidbAid, resolution, exclusions, fetch }, options) {
     if (!anidbAid) return []
     const query = this._buildQuery({ resolution, exclusions })
     const res = await fetch(`${this.url}?aid=${anidbAid}${query}`)

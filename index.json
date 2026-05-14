@@ -1,6 +1,7 @@
 [
   {
-    "id": "jacketmantel.extension.animetosho",
+    "manifestVersion": 2,
+    "id": "jacketmantel-animetosho",
     "name": "AnimeTosho",
     "version": "1.0.0",
     "type": "torrent",
@@ -20,7 +21,8 @@
     }
   },
   {
-    "id": "jacketmantel.extension.seadex",
+    "manifestVersion": 2,
+    "id": "jacketmantel-seadex",
     "name": "SeaDex",
     "version": "1.0.0",
     "type": "torrent",
@@ -33,20 +35,22 @@
     "code": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/seadex.js"
   },
   {
-    "id": "jacketmantel.extension.nyaa",
+    "manifestVersion": 2,
+    "id": "jacketmantel-nyaa",
     "name": "Nyaa",
     "version": "1.0.0",
     "type": "torrent",
     "accuracy": "medium",
     "ratio": 0,
     "media": "sub",
-    "languages": ["all"],
+    "languages": ["US"],
     "icon": "https://nyaa.si/static/favicon.png",
     "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
     "code": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/nyaa.js"
   },
   {
-    "id": "jacketmantel.extension.nekobt",
+    "manifestVersion": 2,
+    "id": "jacketmantel-nekobt",
     "name": "NekoBT",
     "version": "1.0.0",
     "type": "torrent",

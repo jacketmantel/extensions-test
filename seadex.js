@@ -1,8 +1,7 @@
 export default new class SeaDex {
   url = "https://releases.moe/api/collections/entries/records"
 
-  async _search({ anilistId, titles, episodeCount }) {
-    if (!navigator.onLine) return []
+  async _search({ anilistId, titles, episodeCount, fetch }) {
     if (!anilistId) return []
     if (!titles?.length) return []
 

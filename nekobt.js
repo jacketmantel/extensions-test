@@ -11,17 +11,18 @@ function idToTime(id) {
 export default new class NekoBT {
   url = "https://nekobt.to/api/v1/"
 
-  async _media({ tvdbId, tmdbId, imdbId, fetch: f }) {
+  async _media({ tvdbId, tmdbId, imdbId, fetch }) {
     const map = await mappings
     const nekoID = map.tvdb?.[tvdbId] ?? map.tmdb?.[tmdbId] ?? map.imdb?.[imdbId]
     if (!nekoID) return null
-    const res = await f(`${this.url}media/${nekoID}`)
+    const res = await fetch(`${this.url}media/${nekoID}`)
+    if (!res.ok) return null
     const json = await res.json()
     if (json.error) return null
     return { nekoID, data: json.data }
   }
 
-  _map(entries, batch = false) {
+  _map(entries) {
     return entries?.data?.results?.map(entry => ({
       title:     entry.title,
       link:      `${this.url}torrents/${entry.id}/download?public=true`,
@@ -36,19 +37,19 @@ export default new class NekoBT {
     })) ?? []
   }
 
-  async single({ tvdbId, tvdbEId, tmdbId, imdbId, episode, fetch: f }) {
-    if (!navigator.onLine) return []
-    const media = await this._media({ tvdbId, tmdbId, imdbId, fetch: f })
+  async single({ tvdbId, tvdbEId, tmdbId, imdbId, episode, fetch }) {
+    const media = await this._media({ tvdbId, tmdbId, imdbId, fetch })
     if (!media) return []
     const { data, nekoID } = media
     const ep = data?.episodes?.find(e => e.tvdbId === tvdbEId)
             ?? data?.episodes?.find(e => e.episode === episode)
     let url = `${this.url}torrents/search?media_id=${nekoID}&fansub_lang=en%2Cenm&sub_lang=en%2Cenm`
     if (ep?.id) url += `&episode_ids=${ep.id}`
-    const res = await f(url)
+    const res = await fetch(url)
+    if (!res.ok) return []
     const json = await res.json()
     if (json.error) return []
-    return this._map(json, false)
+    return this._map(json)
   }
 
   batch = () => []

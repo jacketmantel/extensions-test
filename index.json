@@ -10,8 +10,8 @@
     "media": "sub",
     "languages": ["US"],
     "icon": "https://animetosho.org/inc/favicon.ico",
-    "update": "https://exten.pages.dev/index.json",
-    "code": "https://exten.pages.dev/animetosho.js",
+    "update": "https://github.com/jacketmantel/extensions-test/index.json",
+    "code": "https://github.com/jacketmantel/extensions-test/animetosho.js",
     "options": {
       "useTorrent": {
         "type": "boolean",
@@ -31,8 +31,8 @@
     "media": "sub",
     "languages": ["US"],
     "icon": "https://releases.moe/favicon.png",
-    "update": "https://exten.pages.dev/index.json",
-    "code": "https://exten.pages.dev/seadex.js"
+    "update": "https://github.com/jacketmantel/extensions-test/index.json",
+    "code": "https://github.com/jacketmantel/extensions-test/seadex.js"
   },
   {
     "manifestVersion": 2,
@@ -45,8 +45,8 @@
     "media": "sub",
     "languages": ["US"],
     "icon": "https://nyaa.si/static/favicon.png",
-    "update": "https://exten.pages.dev/index.json",
-    "code": "https://exten.pages.dev/nyaa.js"
+    "update": "https://github.com/jacketmantel/extensions-test/index.json",
+    "code": "https://github.com/jacketmantel/extensions-test/nyaa.js"
   },
   {
     "manifestVersion": 2,
@@ -61,7 +61,7 @@
     "languages": ["US"],
     "url": "https://nekobt.to/api/v1/",
     "icon": "https://nekobt.to/cdn/pfp/null/64",
-    "update": "https://exten.pages.dev/index.json",
-    "code": "https://exten.pages.dev/nekobt.js"
+    "update": "https://github.com/jacketmantel/extensions-test/index.json",
+    "code": "https://github.com/jacketmantel/extensions-test/nekobt.js"
   }
 ]

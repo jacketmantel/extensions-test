@@ -1,0 +1,67 @@
+[
+  {
+    "manifestVersion": 2,
+    "name": "AnimeTosho",
+    "id": "animetosho",
+    "version": "0.2.0",
+    "type": "torrent",
+    "accuracy": "high",
+    "ratio": 0,
+    "media": "sub",
+    "languages": ["US"],
+    "icon": "https://animetosho.org/inc/favicon.ico",
+    "update": "https://exten.pages.dev/index.json",
+    "code": "https://exten.pages.dev/animetosho.js",
+    "options": {
+      "useTorrent": {
+        "type": "boolean",
+        "description": "Use .torrent files instead of magnet links. May cause issues if your ISP blocks certain domains.",
+        "default": false
+      }
+    }
+  },
+  {
+    "manifestVersion": 2,
+    "name": "SeaDex",
+    "id": "seadex",
+    "version": "0.1.0",
+    "type": "torrent",
+    "accuracy": "high",
+    "ratio": 0,
+    "media": "sub",
+    "languages": ["US"],
+    "icon": "https://releases.moe/favicon.png",
+    "update": "https://exten.pages.dev/index.json",
+    "code": "https://exten.pages.dev/seadex.js"
+  },
+  {
+    "manifestVersion": 2,
+    "name": "Nyaa",
+    "id": "nyaa",
+    "version": "0.1.0",
+    "type": "torrent",
+    "accuracy": "medium",
+    "ratio": 0,
+    "media": "sub",
+    "languages": ["US"],
+    "icon": "https://nyaa.si/static/favicon.png",
+    "update": "https://exten.pages.dev/index.json",
+    "code": "https://exten.pages.dev/nyaa.js"
+  },
+  {
+    "manifestVersion": 2,
+    "name": "NekoBT",
+    "id": "nekobt",
+    "version": "0.1.0",
+    "type": "torrent",
+    "accuracy": "high",
+    "ratio": 0,
+    "media": "sub",
+    "updatePeers": false,
+    "languages": ["US"],
+    "url": "https://nekobt.to/api/v1/",
+    "icon": "https://nekobt.to/cdn/pfp/null/64",
+    "update": "https://exten.pages.dev/index.json",
+    "code": "https://exten.pages.dev/nekobt.js"
+  }
+]

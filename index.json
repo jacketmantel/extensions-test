@@ -11,7 +11,7 @@
     "languages": ["US"],
     "icon": "https://animetosho.org/inc/favicon.ico",
     "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
-    "code": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/animetosho.js",
+    "code": "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2phY2tldG1hbnRlbC9leHRlbnNpb25zLXRlc3QvbWFpbi9hbmltZXRvc2hvLmpz",
     "options": {
       "useTorrent": {
         "type": "boolean",
@@ -32,7 +32,7 @@
     "languages": ["US"],
     "icon": "https://releases.moe/favicon.png",
     "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
-    "code": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/seadex.js"
+    "code": "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2phY2tldG1hbnRlbC9leHRlbnNpb25zLXRlc3QvbWFpbi9zZWFkZXguanM="
   },
   {
     "manifestVersion": 2,
@@ -46,7 +46,7 @@
     "languages": ["US"],
     "icon": "https://nyaa.si/static/favicon.png",
     "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
-    "code": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/nyaa.js"
+    "code": "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2phY2tldG1hbnRlbC9leHRlbnNpb25zLXRlc3QvbWFpbi9ueWFhLmpz"
   },
   {
     "manifestVersion": 2,
@@ -61,6 +61,6 @@
     "languages": ["US"],
     "icon": "https://nekobt.to/cdn/pfp/null/64",
     "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
-    "code": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/nekobt.js"
+    "code": "aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2phY2tldG1hbnRlbC9leHRlbnNpb25zLXRlc3QvbWFpbi9uZWtvYnQuanM="
   }
 ]

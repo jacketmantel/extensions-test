@@ -1,16 +1,16 @@
 [
   {
+    "id": "jacketmantel.extension.animetosho",
     "name": "AnimeTosho",
-    "id": "animetosho",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "type": "torrent",
     "accuracy": "high",
     "ratio": 0,
     "media": "sub",
     "languages": ["US"],
     "icon": "https://animetosho.org/inc/favicon.ico",
-    "update": "gh:jacketmantel/extensions-test",
-    "code": "gh:jacketmantel/extensions-test/animetosho",
+    "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
+    "code": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/animetosho.js",
     "options": {
       "useTorrent": {
         "type": "boolean",
@@ -20,35 +20,35 @@
     }
   },
   {
+    "id": "jacketmantel.extension.seadex",
     "name": "SeaDex",
-    "id": "seadex",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "type": "torrent",
     "accuracy": "high",
     "ratio": 0,
     "media": "sub",
     "languages": ["US"],
     "icon": "https://releases.moe/favicon.png",
-    "update": "gh:jacketmantel/extensions-test",
-    "code": "gh:jacketmantel/extensions-test/seadex"
+    "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
+    "code": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/seadex.js"
   },
   {
+    "id": "jacketmantel.extension.nyaa",
     "name": "Nyaa",
-    "id": "nyaa",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "type": "torrent",
     "accuracy": "medium",
     "ratio": 0,
     "media": "sub",
-    "languages": ["US"],
+    "languages": ["all"],
     "icon": "https://nyaa.si/static/favicon.png",
-    "update": "gh:jacketmantel/extensions-test",
-    "code": "gh:jacketmantel/extensions-test/nyaa"
+    "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
+    "code": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/nyaa.js"
   },
   {
+    "id": "jacketmantel.extension.nekobt",
     "name": "NekoBT",
-    "id": "nekobt",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "type": "torrent",
     "accuracy": "high",
     "ratio": 0,
@@ -56,7 +56,7 @@
     "updatePeers": false,
     "languages": ["US"],
     "icon": "https://nekobt.to/cdn/pfp/null/64",
-    "update": "gh:jacketmantel/extensions-test",
-    "code": "gh:jacketmantel/extensions-test/nekobt"
+    "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
+    "code": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/nekobt.js"
   }
 ]

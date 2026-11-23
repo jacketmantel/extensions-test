@@ -1,3 +1,6 @@
+// AnimeTosho torrent source for Hayase.
+// Manifest `url` must be base64("https://feed.animetosho.org") or every request fails with "Failed to fetch".
+
 const QUALITIES = ["2160", "1080", "720", "540", "480"]
 
 export default new class AnimeTosho {
@@ -29,37 +32,55 @@ export default new class AnimeTosho {
     }))
   }
 
-  async single({ anidbEid, resolution, exclusions, fetch }, options) {
-    if (!anidbEid) return []
+  async single({ anidbEid, titles, episode, resolution, exclusions, fetch: f }, options) {
+    if (!anidbEid) {
+      // No AniDB episode ID from Hayase, so fall back to a plain title search.
+      if (!titles?.[0]) return []
+      const ep = episode ? ` ${String(episode).padStart(2, "0")}` : ""
+      const res = resolution ? ` ${resolution}p` : ""
+      const q = encodeURIComponent(`${titles[0]}${ep}${res}`)
+      const r = await (f ?? fetch)(`${this.url}?q=${q}`)
+      if (!r.ok) throw new Error(`AnimeTosho returned HTTP ${r.status}`)
+      const data = (await r.json()).filter(e =>
+        !exclusions?.some(x => (e.title || "").toLowerCase().includes(x.toLowerCase())))
+      return this._map(data, false, options?.useTorrent).map(e => ({ ...e, accuracy: "low" }))
+    }
     const query = this._buildQuery({ resolution, exclusions })
-    const res = await fetch(`${this.url}?eid=${anidbEid}${query}`)
-    if (!res.ok) return []
+    const res = await (f ?? fetch)(`${this.url}?eid=${anidbEid}${query}`)
+    if (!res.ok) throw new Error(`AnimeTosho returned HTTP ${res.status}`)
     const data = await res.json()
     return data.length ? this._map(data, false, options?.useTorrent) : []
   }
 
-  async batch({ anidbAid, resolution, exclusions, episode, fetch }, options) {
+  async batch({ anidbAid, resolution, exclusions, episode, fetch: f }, options) {
     if (!anidbAid) return []
     const query = this._buildQuery({ resolution, exclusions })
-    const res = await fetch(`${this.url}?order=size-d&aid=${anidbAid}${query}`)
-    if (!res.ok) return []
+    const res = await (f ?? fetch)(`${this.url}?order=size-d&aid=${anidbAid}${query}`)
+    if (!res.ok) throw new Error(`AnimeTosho returned HTTP ${res.status}`)
     const data = (await res.json()).filter(
       entry => entry.num_files >= Math.min(24, Math.max(2, episode ?? 1))
     )
     return data.length ? this._map(data, true, options?.useTorrent) : []
   }
 
-  async movie({ anidbAid, resolution, exclusions, fetch }, options) {
+  async movie({ anidbAid, resolution, exclusions, fetch: f }, options) {
     if (!anidbAid) return []
     const query = this._buildQuery({ resolution, exclusions })
-    const res = await fetch(`${this.url}?aid=${anidbAid}${query}`)
-    if (!res.ok) return []
+    const res = await (f ?? fetch)(`${this.url}?aid=${anidbAid}${query}`)
+    if (!res.ok) throw new Error(`AnimeTosho returned HTTP ${res.status}`)
     const data = await res.json()
     return data.length ? this._map(data, false, options?.useTorrent) : []
   }
 
-  async test() {
-    const res = await fetch(this.url)
-    return res.ok
+  async test(query) {
+    const f = query?.fetch ?? fetch
+    let res
+    try {
+      res = await f(`${this.url}?q=test`)
+    } catch (err) {
+      throw new Error(`Could not reach AnimeTosho. (${err.message})`)
+    }
+    if (!res.ok) throw new Error(`AnimeTosho returned HTTP ${res.status}. The site may be down.`)
+    return true
   }
 }()

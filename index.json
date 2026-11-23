@@ -9,7 +9,9 @@
     "accuracy": "high",
     "ratio": 0,
     "media": "sub",
-    "languages": ["US"],
+    "languages": [
+      "US"
+    ],
     "url": "aHR0cHM6Ly9mZWVkLmFuaW1ldG9zaG8ub3Jn",
     "icon": "https://animetosho.org/inc/favicon.ico",
     "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
@@ -32,7 +34,9 @@
     "accuracy": "high",
     "ratio": 0,
     "media": "sub",
-    "languages": ["US"],
+    "languages": [
+      "US"
+    ],
     "url": "aHR0cHM6Ly9zZWFkZXgubW9l",
     "icon": "https://releases.moe/favicon.png",
     "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
@@ -48,7 +52,9 @@
     "accuracy": "low",
     "ratio": 0,
     "media": "sub",
-    "languages": ["US"],
+    "languages": [
+      "US"
+    ],
     "url": "aHR0cHM6Ly9ueWFhLnNp",
     "icon": "https://nyaa.si/static/favicon.png",
     "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",
@@ -59,13 +65,15 @@
     "id": "jacketmantel-nekobt",
     "name": "NekoBT",
     "description": "NekoBT tracker, matched by TVDB, TMDB or IMDb ID.",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "type": "torrent",
     "accuracy": "high",
     "ratio": 0,
     "media": "sub",
     "updatePeers": false,
-    "languages": ["US"],
+    "languages": [
+      "US"
+    ],
     "url": "aHR0cHM6Ly9uZWtvYnQudG8=",
     "icon": "https://nekobt.to/cdn/pfp/null/64",
     "update": "https://raw.githubusercontent.com/jacketmantel/extensions-test/main/index.json",

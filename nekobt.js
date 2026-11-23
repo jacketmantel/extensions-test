@@ -53,7 +53,8 @@ export default new class NekoBT {
       if (nekoID) break
     }
     if (!nekoID) return null
-    const res = await query.fetchFn(`${API}media/${nekoID}`)
+    const fetchFn = query.fetchFn
+    const res = await fetchFn(`${API}media/${nekoID}`)
     if (!res.ok) return null
     const json = await res.json()
     if (json.error) return null
